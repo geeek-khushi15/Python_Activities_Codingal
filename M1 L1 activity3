@@ -4,3 +4,17 @@ A flowchart is a graphical representation of steps.
 It shows the steps in sequential order. It is widely used in presenting the flow of algorithms, workflow, or processes. 
 
 A flowchart shows the steps as boxes of various kinds and their order by connecting them with arrows.
+
+
+Before solving any problem, creating a flowchart of the solution helps a programmer put down the answer better and more efficiently. All the programmers mostly follow this.
+
+Flowchart Notation
+Different flowchart symbols have different meanings. However, the most common symbols of the flowchart are:
+
+Terminator: It is Elongated circles, which signify the start or end of an instruction.
+Process: A rectangular shape indicates a standard process flow step (instructions or actions).
+Decision: A diamond flowchart shape indication a branch in the process flow.decisions that must be made
+Connector: A small, labelled, circular flow chart shape indicates a jump in the process flow. 
+
+Data: It is a  parallelogram that indicates data input or output (I/O) for a process.
+Document: It is used to indicate a paper or report.
