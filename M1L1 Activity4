@@ -1,0 +1,54 @@
+Folder Structure
+What is a Folder Structure?
+A folder structure is a way to organize files on your computer. It helps keep your work neat and easy to find.
+
+Why is it Important
+Organization: Keeps your files organized so you can easily find what you need.
+Clarity: Makes it clear where each file belongs, especially when working on multiple projects.
+Efficiency: Saves time by avoiding clutter and confusion.
+ 
+Our Folder Structure 
+Step 1 : Create a Folder Named after your course & open it as shown in the example below
+
+ 
+Step 2 : Create a Folder Named after Lesson & activity as shown
+ 
+Step 3 : Open the Folder using VS Code
+
+ 
+Step 4: Create main.py file
+Install & Use extensions in VS Code
+Install Python Extension
+
+ 
+Run Python
+
+Note: You can also run the file in the terminal using the following command, and it will accept user input.
+macOS: Run python3 filename.py in the VS Code terminal, replacing filename.py with the name of your Python file.
+Windows: Run python filename.py in the VS Code terminal, replacing filename.py with the name of your Python file.
+ 
+Install Live Share
+
+
+ 
+Click on Live Share
+
+ 
+Click on Share(Read/Write) & wait for the Link to generate
+
+ 
+You will get a Notification of Link has been copied to your Clipboard > Go back to the Classroom > click on chat > paste the Link for teachers to Join
+
+ 
+Teachers Can copy the Join Link 
+Click on Join
+
+ 
+Paste the Url to Join the students VS code
+ 
+Configure username & email id using git config
+Open the terminal in VS Code as shown
+Step 1 : Click on the Terminal icon as shown to open terminal
+Step 2: Type the commands shown followed by GitHub Username & email id
+
+ 
