@@ -1,0 +1,11 @@
+# Activity 2: Divisible Number
+# Check if a number is divisible by another number
+
+num = int(input("Enter the number to be checked: "))
+divisor = int(input("Enter the divisor: "))
+
+# A number is divisible if the remainder is 0
+if num % divisor == 0:
+    print(f"{num} is divisible by {divisor}")
+else:
+    print(f"{num} is not divisible by {divisor}")
