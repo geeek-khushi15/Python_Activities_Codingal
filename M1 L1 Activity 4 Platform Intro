@@ -1,0 +1,69 @@
+Part 1: Install Visual Studio Code
+Step 1: Download VS Code
+Visit: https://code.visualstudio.com/
+Click Download according to your operating system (Windows/macOS/Linux).
+Step 2: Install VS Code
+Run the installer.
+Click Next.
+Accept the License Agreement.
+Click Next until the Select Additional Tasks screen.
+Check:
+✅ Add "Open with Code" action
+✅ Add to PATH
+✅ Register Code as an editor
+Click Install.
+Click Finish.
+Step 3: Open VS Code
+
+Verify that VS Code opens successfully.
+
+Part 2: Install Python Extension
+Open VS Code.
+Click the Extensions icon (Ctrl + Shift + X).
+Search for Python.
+Install the Python extension published by Microsoft.
+Part 3: Install Git
+Windows
+Visit: https://git-scm.com/downloads
+Download Git for Windows.
+Run the installer.
+Keep the default settings (or choose VS Code as the default editor).
+Click Install.
+Click Finish.
+macOS
+
+Open Terminal and run:
+
+xcode-select --install
+
+Verify installation:
+
+git --version
+Part 4: Create a GitHub Account
+Visit https://github.com
+Click Sign Up.
+Enter:
+Email Address
+Username
+Password
+Verify your email.
+Complete the setup.
+Part 5: Configure Git
+
+Open the VS Code Terminal.
+
+git config --global user.name "Your Name"
+git config --global user.email "your@email.com"
+
+Verify:
+
+git config --list
+Part 6: Verify Installation
+Check Python
+python --version
+
+or (macOS)
+
+python3 --version
+Check Git
+git --version
