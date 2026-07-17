@@ -1,0 +1,11 @@
+# Activity 3: Mean Value
+# Calculate the mean of three numbers
+
+num1 = float(input("Enter first number: "))
+num2 = float(input("Enter second number: "))
+num3 = float(input("Enter third number: "))
+
+# Calculate the mean (sum divided by count)
+mean = (num1 + num2 + num3) / 3
+
+print(f"The mean of the three numbers is: {mean:.2f}")
