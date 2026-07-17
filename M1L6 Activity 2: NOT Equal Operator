@@ -1,0 +1,16 @@
+# Activity 2: NOT Equal Operator
+# Checking if two values are not equal to each other
+
+a = 10
+b = 12
+c = 10
+
+# Comparing a and b (they are different, so a != b is True)
+if a != b:
+    print(f"{a} and {b} are not equal")
+
+# Comparing a and c (they are the same, so a != c is False)
+if a != c:
+    print(f"{a} and {c} are not equal")
+else:
+    print(f"{a} and {c} are equal")
