@@ -1,0 +1,24 @@
+# Ask the user for their name and favorite gadget
+name = input("Enter your name: ")
+gadget = input("Enter your favorite gadget: ")
+
+# String Indexing
+print("First Character:", name[0])
+print("Last Character:", name[-1])
+
+# String Slicing
+first_three = name[0:3]
+last_letter = name[-1:]
+code_name = first_three + last_letter
+
+print("First 3 Letters:", first_three)
+print("Last Letter:", last_letter)
+print("Secret Code Name:", code_name)
+
+# Reverse the gadget name
+reversed_gadget = gadget[::-1]
+print("Reversed Gadget:", reversed_gadget)
+
+# String Concatenation
+message = "Hello Agent " + code_name + "! Your gadget is " + gadget + "."
+print(message)
