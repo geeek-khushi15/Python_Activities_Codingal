@@ -1,0 +1,14 @@
+# Activity 1: Operator Precedence
+# Understanding the order of operations in Python (PEMDAS/BODMAS)
+
+# Example: The expression will be evaluated based on operator precedence
+# Parentheses (), Exponents **, Multiplication/Division *, /, Addition/Subtraction +, -
+
+result = (2 + 3) * 4 / 2 ** 2
+
+print(f"The result of (2 + 3) * 4 / 2 ** 2 is: {result}")
+
+# Step-by-step breakdown:
+# 1. Parentheses: (2 + 3) = 5
+# 2. Exponents: 2 ** 2 = 4
+# 3. Multiplication/Division (left to right): 5 * 4 = 20, 20 / 4 = 5.0
