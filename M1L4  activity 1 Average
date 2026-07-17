@@ -1,0 +1,16 @@
+# Store the harvest (in kg) from 5 fields
+field1 = 120
+field2 = 85
+field3 = 150
+field4 = 95
+field5 = 110
+
+# Calculate the total harvest
+total = field1 + field2 + field3 + field4 + field5
+
+# Calculate the average harvest
+average = total / 5
+
+# Display the results
+print("Total Harvest:", total, "kg")
+print("Average Harvest per Field:", average, "kg")
