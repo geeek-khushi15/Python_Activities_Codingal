@@ -1,0 +1,17 @@
+# Activity 1: Identity operators
+# 'is' returns True if both variables point to the same memory object
+
+a = 10
+b = 10
+c = "Codingal"
+d = "Codingal"
+
+# Comparing integers
+print(a is b)  # Output: True (Python caches small integers)
+
+# Comparing strings
+print(c is d)  # Output: True
+
+# Changing a value
+a = 20
+print(a is b)  # Output: False
