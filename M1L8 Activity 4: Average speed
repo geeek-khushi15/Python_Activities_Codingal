@@ -1,0 +1,10 @@
+# Activity 4: Average Speed
+# Calculate the average speed (Total Distance / Total Time)
+
+distance = float(input("Enter the total distance traveled (in km): "))
+time = float(input("Enter the total time taken (in hours): "))
+
+# Calculate average speed
+average_speed = distance / time
+
+print(f"The average speed is: {average_speed:.2f} km/h")
