@@ -1,0 +1,16 @@
+# Total amount to withdraw
+amount = 7850
+
+# Value of one note
+note_value = 500
+
+# Count the number of notes
+notes = amount // note_value
+
+# Find the remaining amount
+remaining = amount % note_value
+
+# Display the result
+print("Withdrawal Amount: ₹", amount)
+print("₹500 Notes:", notes)
+print("Remaining Amount: ₹", remaining)
