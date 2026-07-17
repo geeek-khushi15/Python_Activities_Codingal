@@ -1,0 +1,29 @@
+# Activity 2: Bitwise Operators
+# Using bitwise operators on integers
+
+a = 10  # Binary: 1010
+b = 4   # Binary: 0100
+
+# Bitwise AND (&)
+# 1010 & 0100 = 0000 (0)
+print(f"a & b = {a & b}")
+
+# Bitwise OR (|)
+# 1010 | 0100 = 1110 (14)
+print(f"a | b = {a | b}")
+
+# Bitwise XOR (^)
+# 1010 ^ 0100 = 1110 (14)
+print(f"a ^ b = {a ^ b}")
+
+# Bitwise NOT (~)
+# ~10 = -(10+1) = -11
+print(f"~a = {~a}")
+
+# Bitwise Left Shift (<<)
+# 10 << 2 = 10 * 2^2 = 40
+print(f"a << 2 = {a << 2}")
+
+# Bitwise Right Shift (>>)
+# 10 >> 2 = 10 // 2^2 = 2
+print(f"a >> 2 = {a >> 2}")
