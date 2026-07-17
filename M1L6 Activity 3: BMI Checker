@@ -1,0 +1,27 @@
+# Activity 3: BMI Checker
+# Calculate Body Mass Index and determine weight category
+
+height = float(input("Enter your height in centimeters: "))
+weight = float(input("Enter your weight in kilograms: "))
+
+# Convert height from centimeters to meters
+height_in_meters = height / 100
+
+# Calculate BMI using the formula: weight / (height_in_meters ^ 2)
+bmi = weight / (height_in_meters ** 2)
+
+print(f"Your Body Mass Index (BMI) is: {bmi:.2f}")
+
+# Determine the weight category based on BMI value
+if bmi <= 18.4:
+    print("You are underweight.")
+elif bmi <= 24.9:
+    print("You are healthy.")
+elif bmi <= 29.9:
+    print("You are over weight.")
+elif bmi <= 34.9:
+    print("You are severely over weight.")
+elif bmi <= 39.9:
+    print("You are obese.")
+else:
+    print("You are severely obese.")
