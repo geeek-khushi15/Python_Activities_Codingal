@@ -1,0 +1,10 @@
+# Activity: Checking if a number is greater or smaller than a target value
+target = 10
+number = int(input("Enter a number: "))
+
+if number > target:
+    print(f"{number} is greater than {target}")
+elif number < target:
+    print(f"{number} is smaller than {target}")
+else:
+    print(f"{number} is equal to {target}")
