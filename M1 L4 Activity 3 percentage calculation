@@ -1,0 +1,16 @@
+# Store marks of 5 subjects
+english = 85
+maths = 92
+science = 78
+social = 88
+computer = 95
+
+# Calculate total marks
+total = english + maths + science + social + computer
+
+# Calculate percentage
+percentage = (total / 500) * 100
+
+# Display the results
+print("Total Marks:", total)
+print("Percentage:", percentage, "%")
