@@ -1,0 +1,29 @@
+# Store values
+agent_number = 7
+mission_count = 12
+speed_rating = 9.5
+is_active = True
+
+# Check original data types
+print(type(agent_number))
+print(type(mission_count))
+print(type(speed_rating))
+print(type(is_active))
+
+# Convert values into strings
+agent_number_text = str(agent_number)
+mission_count_text = str(mission_count)
+speed_rating_text = str(speed_rating)
+status_text = str(is_active)
+
+# Check new data types
+print(type(agent_number_text))
+print(type(mission_count_text))
+print(type(speed_rating_text))
+print(type(status_text))
+
+# Display converted values
+print("Agent Number:", agent_number_text)
+print("Mission Count:", mission_count_text)
+print("Speed Rating:", speed_rating_text)
+print("Status:", status_text)
