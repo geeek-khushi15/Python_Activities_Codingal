@@ -1,0 +1,6 @@
+fire = input("Is there a fire? (yes/no): ")
+
+if fire.lower() == "yes":
+    print("🚒 Call the Fire Brigade!")
+else:
+    print("✅ No need to call the Fire Brigade.")
