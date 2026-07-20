@@ -1,0 +1,15 @@
+# Prominent Word Activity
+
+text = input("Enter a sentence: ")
+words = text.split()
+
+# Create a dictionary to count frequencies
+frequency = {}
+for word in words:
+    frequency[word] = frequency.get(word, 0) + 1
+
+# Find the word with the highest frequency
+prominent_word = max(frequency, key=frequency.get)
+
+print(f"The most prominent word is: '{prominent_word}'")
+print(f"It appeared {frequency[prominent_word]} times.")
