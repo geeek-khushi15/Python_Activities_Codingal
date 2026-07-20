@@ -1,0 +1,8 @@
+def convert_number(num):
+    print(f"Number: {num}")
+    print(f"Binary: {bin(num)}")
+    print(f"Octal: {oct(num)}")
+    print(f"Hexadecimal: {hex(num)}")
+
+# Example usage
+convert_number(25)
