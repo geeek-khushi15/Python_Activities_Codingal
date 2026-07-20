@@ -1,0 +1,20 @@
+# Electricity Bill Calculation
+
+units = float(input("Enter the total units consumed: "))
+
+if units <= 50:
+    amount = units * 2.60
+elif units <= 150:
+    amount = (50 * 2.60) + ((units - 50) * 3.25)
+elif units <= 250:
+    amount = (50 * 2.60) + (100 * 3.25) + ((units - 150) * 5.20)
+else:
+    amount = (50 * 2.60) + (100 * 3.25) + (100 * 5.20) + ((units - 250) * 6.50)
+
+# Calculating total with 17% surcharge
+surcharge = amount * 0.17
+total_bill = amount + surcharge
+
+print(f"Base Amount: ₹{amount:.2f}")
+print(f"Surcharge (17%): ₹{surcharge:.2f}")
+print(f"Total Electricity Bill: ₹{total_bill:.2f}")
