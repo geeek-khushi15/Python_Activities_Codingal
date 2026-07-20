@@ -1,0 +1,10 @@
+def employee_details(name, designation, salary=20000):
+    print(f"Employee Name: {name}")
+    print(f"Designation: {designation}")
+    print(f"Salary: ${salary}")
+
+# Example usage with default salary
+employee_details("Khushi", "Python Developer")
+
+# Example usage overriding the default salary
+employee_details("Sun", "Cybersecurity Expert", 50000)
