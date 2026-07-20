@@ -1,0 +1,16 @@
+# Older One Activity
+
+# Taking input for two people
+name1 = input("Enter the name of the first person: ")
+age1 = int(input(f"Enter the age of {name1}: "))
+
+name2 = input("Enter the name of the second person: ")
+age2 = int(input(f"Enter the age of {name2}: "))
+
+# Comparing ages
+if age1 > age2:
+    print(f"{name1} is older than {name2}.")
+elif age2 > age1:
+    print(f"{name2} is older than {name1}.")
+else:
+    print(f"{name1} and {name2} are the same age.")
