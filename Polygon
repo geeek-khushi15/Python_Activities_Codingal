@@ -1,0 +1,23 @@
+# Polygon Activity
+
+import turtle
+
+# Set up the screen and turtle
+screen = turtle.Screen()
+screen.title("Draw a Polygon")
+t = turtle.Turtle()
+
+# Take input for the number of sides and side length
+num_sides = int(input("Enter the number of sides for the polygon: "))
+side_length = int(input("Enter the length of each side: "))
+
+# Calculate the exterior angle
+angle = 360 / num_sides
+
+# Draw the polygon using a loop
+for i in range(num_sides):
+    t.forward(side_length)
+    t.right(angle)
+
+# Keep the turtle window open until closed manually
+turtle.done()
