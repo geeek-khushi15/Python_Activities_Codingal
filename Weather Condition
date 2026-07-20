@@ -1,0 +1,15 @@
+def weather_condition(season):
+    if season.lower() == "autumn":
+        print("The weather is pleasant and cool!")
+    elif season.lower() == "spring":
+        print("The weather is warm and flowers are blooming!")
+    elif season.lower() == "summer":
+        print("It is hot and sunny outside!")
+    elif season.lower() == "winter":
+        print("It is cold and chilly!")
+    else:
+        print("Please enter a valid season.")
+
+# Example function calls
+weather_condition("autumn")
+weather_condition("spring")
