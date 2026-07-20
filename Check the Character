@@ -1,0 +1,13 @@
+# Check the Character Activity
+
+char = input("Enter a single character: ")
+
+if len(char) == 1:
+    if char.isalpha():
+        print(f"'{char}' is an Alphabet letter.")
+    elif char.isdigit():
+        print(f"'{char}' is a Digit.")
+    else:
+        print(f"'{char}' is a Special Character.")
+else:
+    print("Please enter exactly one character.")
