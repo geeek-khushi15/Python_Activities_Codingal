@@ -1,0 +1,18 @@
+# Spiral Helix Activity
+
+import turtle
+
+# Set up the screen and turtle
+screen = turtle.Screen()
+screen.bgcolor("black")
+t = turtle.Turtle()
+t.speed(0)      # Fastest speed
+t.color("cyan") # Choose a color that pops on a black background
+
+# Draw the spiral helix using a for loop
+for i in range(100):
+    t.circle(i * 2)  # Draw a circle with an increasing radius
+    t.left(10)       # Turn left by 10 degrees before drawing the next circle
+
+# Keep the turtle window open until closed manually
+turtle.done()
