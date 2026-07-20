@@ -1,0 +1,10 @@
+import math
+
+def check_proximity(a, b):
+    # Returns True if the values are close within a relative tolerance
+    return math.isclose(a, b, rel_tol=1e-09)
+
+# Example usage
+val1 = 1.0000000001
+val2 = 1.0
+print(f"Are {val1} and {val2} close? {check_proximity(val1, val2)}")
