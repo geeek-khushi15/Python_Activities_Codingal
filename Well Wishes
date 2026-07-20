@@ -1,0 +1,5 @@
+def well_wishes():
+    print("Hello! Hope you are having a wonderful day!")
+
+# Calling the function
+well_wishes()
