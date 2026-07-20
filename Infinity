@@ -1,0 +1,5 @@
+# Infinity Activity
+
+# This while loop will run forever because the condition 'True' is always met
+while True:
+    print("This is an infinite loop! Press Ctrl+C to stop.")
