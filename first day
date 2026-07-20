@@ -1,0 +1,12 @@
+import calendar
+
+# Example: Finding the first day of the month for July 2026
+year = 2026
+month = 7
+
+# month_range returns (weekday of first day, number of days in month)
+first_day_weekday, days_in_month = calendar.monthrange(year, month)
+
+# 0 is Monday, 1 is Tuesday, ..., 6 is Sunday
+days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+print(f"The first day of July 2026 is a {days[first_day_weekday]}.")
