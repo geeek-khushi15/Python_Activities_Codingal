@@ -1,0 +1,22 @@
+# Colorful Spiral Activity
+
+import turtle
+
+# Set up the screen and turtle
+screen = turtle.Screen()
+screen.bgcolor("black")  # Black background makes colors pop
+t = turtle.Turtle()
+t.speed(0)  # Fastest drawing speed
+
+# Define a list of colors to cycle through
+colors = ["red", "yellow", "green", "cyan", "blue", "magenta"]
+
+# Draw the colorful spiral using a for loop
+for i in range(200):
+    t.pencolor(colors[i % 6])  # Cycle through the 6 colors
+    t.width(i / 100 + 1)       # Gradually increase the pen thickness
+    t.forward(i)               # Move forward by an increasing distance
+    t.left(59)                 # Turn by 59 degrees to create the spiral
+
+# Keep the turtle window open until closed manually
+turtle.done()
