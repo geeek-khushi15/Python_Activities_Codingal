@@ -1,0 +1,18 @@
+# Decimal to Binary Activity
+
+decimal_num = int(input("Enter a decimal number: "))
+temp = decimal_num
+binary_str = ""
+
+# Handle the case where the user enters 0
+if temp == 0:
+    binary_str = "0"
+else:
+    # Use a while loop to find the binary representation
+    while temp > 0:
+        remainder = temp % 2
+        # Prepend the remainder to the binary string
+        binary_str = str(remainder) + binary_str
+        temp = temp // 2
+
+print(f"The binary representation of {decimal_num} is: {binary_str}")
