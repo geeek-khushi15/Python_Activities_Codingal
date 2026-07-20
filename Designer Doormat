@@ -1,0 +1,18 @@
+# Designer Doormat Activity
+
+# N must be an odd natural number, and M must be 3 times N
+print("Enter N and M (where M is 3 times N), separated by a space:")
+n, m = map(int, input().split())
+
+# Top half of the doormat
+for i in range(1, n, 2):
+    pattern = ".|." * i
+    print(pattern.center(m, "-"))
+
+# Middle "WELCOME" line
+print("WELCOME".center(m, "-"))
+
+# Bottom half of the doormat
+for i in range(n - 2, -1, -2):
+    pattern = ".|." * i
+    print(pattern.center(m, "-"))
