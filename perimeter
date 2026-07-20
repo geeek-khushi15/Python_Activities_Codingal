@@ -1,0 +1,23 @@
+def calculate_perimeter(shape, *args):
+    shape = shape.lower()
+    
+    if shape == "square" and len(args) == 1:
+        side = args[0]
+        return 4 * side
+    elif shape == "rectangle" and len(args) == 2:
+        length, width = args
+        return 2 * (length + width)
+    elif shape == "circle" and len(args) == 1:
+        radius = args[0]
+        return 2 * 3.14159 * radius
+    elif shape == "triangle" and len(args) == 3:
+        a, b, c = args
+        return a + b + c
+    else:
+        return "Invalid shape or incorrect number of arguments."
+
+# Example function calls
+print(f"Perimeter of Square (side=5): {calculate_perimeter('square', 5)}")
+print(f"Perimeter of Rectangle (l=4, w=6): {calculate_perimeter('rectangle', 4, 6)}")
+print(f"Circumference of Circle (r=7): {calculate_perimeter('circle', 7)}")
+print(f"Perimeter of Triangle (3, 4, 5): {calculate_perimeter('triangle', 3, 4, 5)}")
