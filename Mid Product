@@ -1,0 +1,19 @@
+# Mid Product Activity
+
+num_str = input("Enter a number (at least 3 digits): ")
+
+# Check if the number has enough digits to have middle digits
+if len(num_str) >= 3:
+    # Get the middle digits by slicing out the first and last character
+    mid_digits = num_str[1:-1]
+    
+    product = 1
+    
+    # Loop through the middle digits and multiply them
+    for digit in mid_digits:
+        product *= int(digit)
+        
+    print(f"The middle digits are '{mid_digits}'.")
+    print(f"The product of the middle digits is: {product}")
+else:
+    print("The number must have at least 3 digits to find a mid product.")
