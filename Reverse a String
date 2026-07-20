@@ -1,0 +1,8 @@
+# Reverse Order (Countdown) Activity
+
+n = int(input("Enter the number to count down from: "))
+
+# Using a while loop to count down to 0
+while n >= 0:
+    print(n)
+    n -= 1
