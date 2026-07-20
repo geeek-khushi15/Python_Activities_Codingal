@@ -1,0 +1,13 @@
+def check_letter(char):
+    vowels = "aeiouAEIOU"
+    if char.isalpha():
+        if char in vowels:
+            print(f"{char} is a vowel.")
+        else:
+            print(f"{char} is a consonant.")
+    else:
+        print("Please enter a valid letter.")
+
+# Example usage
+check_letter("a")
+check_letter("b")
