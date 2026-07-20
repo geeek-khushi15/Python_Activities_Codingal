@@ -1,0 +1,10 @@
+# Sum of whole numbers
+n = int(input("Enter a number: "))
+sum_numbers = 0
+i = 0
+
+while i <= n:
+    sum_numbers += i
+    i += 1
+
+print(f"The sum of whole numbers from 0 to {n} is: {sum_numbers}")
