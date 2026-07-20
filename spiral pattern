@@ -1,0 +1,17 @@
+# Spiral Pattern Activity
+
+import turtle
+
+# Set up the screen and turtle
+screen = turtle.Screen()
+screen.title("Spiral Pattern")
+t = turtle.Turtle()
+t.speed(0)  # Set the turtle to the fastest drawing speed
+
+# Draw a spiral using a for loop
+for i in range(100):
+    t.forward(i * 3)  # Increase the distance moved forward each time
+    t.right(91)       # Turning by slightly more than 90 degrees creates the spiral effect
+
+# Keep the turtle window open until closed manually
+turtle.done()
