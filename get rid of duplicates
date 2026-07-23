@@ -1,16 +1,21 @@
-# Function to remove duplicate values from a list while preserving order
-def remove_duplicates(input_list):
-    seen = set()
-    result = []
-    for item in input_list:
-        if item not in seen:
-            seen.add(item)
-            result.append(item)
-    return result
+# Dictionary of students (id -> details)
+student_data = {
+    "id1": {"name": "Sara",  "class": "V", "subject_integration": "english, math, science"},
+    "id2": {"name": "David", "class": "V", "subject_integration": "english, math, science"},
+    "id3": {"name": "Sara",  "class": "V", "subject_integration": "english, math, science"},  # duplicate of id1
+    "id4": {"name": "Surya", "class": "V", "subject_integration": "english, math, science"},
+}
 
-# Example usage
-original_list = [10, 20, 20, 30, 40, 10, 50, 30]
-unique_list = remove_duplicates(original_list)
+result = {}
+seen_keys = []  # using a list instead of set
 
-print(f"Original List: {original_list}")
-print(f"List after removing duplicates: {unique_list}")
+for student_id, details in student_data.items():
+    unique_key = (details["name"], details["class"], details["subject_integration"])
+
+    if unique_key not in seen_keys:
+        seen_keys.append(unique_key)
+        result[student_id] = details
+
+# print output line by line
+for k, v in result.items():
+    print(k, ":", v)
