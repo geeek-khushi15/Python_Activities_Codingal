@@ -1,0 +1,20 @@
+class Parent:
+    pass
+
+
+class Child(Parent):
+    pass
+
+
+# Creating instances
+parent_obj = Parent()
+child_obj = Child()
+
+# 1. Checking if Child is a subclass of Parent
+print(f"Is Child a subclass of Parent? {issubclass(Child, Parent)}")
+print(f"Is Parent a subclass of Child? {issubclass(Parent, Child)}")
+
+# 2. Checking object instances
+print(f"Is child_obj an instance of Child? {isinstance(child_obj, Child)}")
+print(f"Is child_obj an instance of Parent? {isinstance(child_obj, Parent)}")
+print(f"Is parent_obj an instance of Child? {isinstance(parent_obj, Child)}")
