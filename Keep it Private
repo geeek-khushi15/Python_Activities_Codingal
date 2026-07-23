@@ -1,0 +1,30 @@
+class Computer:
+    def __init__(self):
+        # Private attribute (hidden from outside)
+        self.__maxprice = 900
+
+    def sell(self):
+        print(f"Selling Price: {self.__maxprice}")
+
+    # Private method
+    def __update_price(self, price):
+        self.__maxprice = price
+
+    # Public method to access/modify the private method internally
+    def setMaxPrice(self, price):
+        self.__update_price(price)
+
+
+# Creating an object of Computer
+c = Computer()
+
+# Trying to view the sell price
+c.sell()
+
+# Trying to change the price directly (this will NOT work or change the private variable)
+c.__maxprice = 1000
+c.sell()
+
+# Using the setter function to safely update the private price
+c.setMaxPrice(1000)
+c.sell()
