@@ -1,0 +1,16 @@
+class Rectangle:
+    def __init__(self, length, width):
+        self.length = length
+        self.width = width
+
+    def calculate_area(self):
+        return self.length * self.width
+
+
+# Creating an object of the Rectangle class
+rect = Rectangle(10, 5)
+
+# Displaying the result
+print(f"Length: {rect.length}")
+print(f"Width: {rect.width}")
+print(f"Area of the rectangle: {rect.calculate_area()}")
