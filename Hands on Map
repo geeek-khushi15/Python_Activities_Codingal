@@ -1,0 +1,16 @@
+# Function to demonstrate the built-in map() function in Python
+def demonstrate_map():
+    # A list of numbers
+    numbers = [1, 2, 3, 4, 5]
+    print(f"Original Numbers: {numbers}")
+    
+    # Using map() with a lambda function to square each number
+    squared_numbers = list(map(lambda x: x ** 2, numbers))
+    print(f"Squared Numbers (using map): {squared_numbers}")
+    
+    # Using map() with an existing function to convert numbers to strings
+    string_numbers = list(map(str, numbers))
+    print(f"Numbers converted to strings: {string_numbers}")
+
+# Example usage
+demonstrate_map()
