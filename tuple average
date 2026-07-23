@@ -1,0 +1,16 @@
+# Function to calculate the mean (average) of corresponding elements in multiple tuples
+def tuple_average(tuple1, tuple2, tuple3):
+    # Using zip to group corresponding elements together and calculating their average
+    averages = tuple(sum(items) / len(items) for items in zip(tuple1, tuple2, tuple3))
+    
+    print(f"Tuple 1: {tuple1}")
+    print(f"Tuple 2: {tuple2}")
+    print(f"Tuple 3: {tuple3}")
+    print(f"Corresponding Averages: {averages}")
+
+# Example usage
+t1 = (10, 20, 30)
+t2 = (15, 25, 35)
+t3 = (20, 30, 40)
+
+tuple_average(t1, t2, t3)
