@@ -1,0 +1,33 @@
+class Bird:
+    def __init__(self):
+        print("Bird is ready")
+
+    def who_is_this(self):
+        print("Bird")
+
+    def swim(self):
+        print("Swim faster")
+
+
+# Penguin class inheriting from Bird
+class Penguin(Bird):
+    def __init__(self):
+        # Call superclass constructor
+        super().__init__()
+        print("Penguin is ready")
+
+    def who_is_this(self):
+        print("Penguin")
+
+    def run(self):
+        print("Run faster")
+
+
+# Creating an instance of Penguin
+peggy = Penguin()
+
+# Invoking methods
+peggy.who_is_this()
+peggy.swim()
+peggy.run()
+
