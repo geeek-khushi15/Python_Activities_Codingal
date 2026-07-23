@@ -1,0 +1,19 @@
+class Vehicle:
+    def __init__(self, name, max_speed, mileage):
+        self.name = name
+        self.max_speed = max_speed
+        self.mileage = mileage
+
+
+# Bus class inheriting from Vehicle
+class Bus(Vehicle):
+    pass
+
+
+# Creating an object of the Bus class
+school_bus = Bus("School Volvo", 180, 12)
+
+# Displaying the details
+print(f"Vehicle Name: {school_bus.name}")
+print(f"Speed: {school_bus.max_speed} km/h")
+print(f"Mileage: {school_bus.mileage} km/l")
