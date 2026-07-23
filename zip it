@@ -1,0 +1,14 @@
+# Function to demonstrate generator functions and the yield keyword
+def count_down(start):
+    print(f"Starting countdown from {start}...")
+    while start > 0:
+        yield start
+        start -= 1
+
+# Example usage
+# Creating a generator object
+counter = count_down(5)
+
+print("Consuming values from the generator:")
+for number in counter:
+    print(f"Count: {number}")
