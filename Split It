@@ -1,0 +1,17 @@
+# Function to split a string into a list of words and process them
+def split_and_process(text):
+    # Splitting the string into a list of words based on whitespace
+    words_list = text.split()
+    
+    print(f"Original Text: '{text}'")
+    print(f"Split List: {words_list}")
+    print(f"Total Words: {len(words_list)}")
+    
+    # Displaying each word individually
+    print("\nIndividual Words:")
+    for index, word in enumerate(words_list, start=1):
+        print(f"Word {index}: {word}")
+
+# Example usage
+sample_text = "Python data structures make text processing efficient and fun!"
+split_and_process(sample_text)
