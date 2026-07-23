@@ -1,0 +1,17 @@
+# Function to zip two lists together and print the pairs
+def zip_lists(list1, list2):
+    zipped_pairs = list(zip(list1, list2))
+    print(f"List 1: {list1}")
+    print(f"List 2: {list2}")
+    print(f"Zipped Pairs: {zipped_pairs}")
+    
+    # Iterating through the zipped pairs
+    print("\nIterating through zipped pairs:")
+    for item1, item2 in zipped_pairs:
+        print(f"Pair: {item1} - {item2}")
+
+# Example usage
+countries = ["India", "Japan", "France", "Brazil"]
+capitals = ["New Delhi", "Tokyo", "Paris", "Brasília"]
+
+zip_lists(countries, capitals)
