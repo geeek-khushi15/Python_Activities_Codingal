@@ -1,0 +1,22 @@
+class Computer:
+    def __init__(self):
+        self.__maxprice = 900
+
+    def sell(self):
+        return f"Selling Price: {self.__maxprice}"
+
+    def setMaxPrice(self, price):
+        self.__maxprice = price
+
+
+# Creating an object of the Computer class
+c = Computer()
+
+# Displaying the initial price
+print(c.sell())
+
+# Changing the price using the setter method
+c.setMaxPrice(1000)
+
+# Displaying the updated price
+print(c.sell())
