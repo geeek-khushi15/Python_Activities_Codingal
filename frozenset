@@ -1,0 +1,25 @@
+# Function to demonstrate working with frozensets
+def demonstrate_frozenset():
+    # Creating a normal set
+    normal_set = {1, 2, 3, 4}
+    print(f"Normal Set: {normal_set}")
+    
+    # Converting normal set to a frozenset
+    # Frozensets are immutable and hashable
+    frozen_obj = frozenset([1, 2, 3, 4, 5])
+    print(f"Frozenset: {frozen_obj}")
+    
+    # Trying set operations (Union, Intersection, Difference)
+    other_set = {4, 5, 6, 7}
+    
+    union_result = frozen_obj.union(other_set)
+    intersection_result = frozen_obj.intersection(other_set)
+    
+    print(f"Union with {other_set}: {union_result}")
+    print(f"Intersection with {other_set}: {intersection_result}")
+    
+    # Note: Elements cannot be added or removed from a frozenset after creation.
+    # frozen_obj.add(6) would raise an AttributeError.
+
+# Example usage
+demonstrate_frozenset()
