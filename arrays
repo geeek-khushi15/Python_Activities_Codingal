@@ -1,0 +1,28 @@
+# Function to demonstrate working with arrays using the array module
+import array as arr
+
+def demonstrate_arrays():
+    # Creating an array of integers
+    # 'i' represents signed integer type code
+    int_array = arr.array('i', [10, 20, 30, 40, 50])
+    
+    print(f"Original Array: {int_array}")
+    
+    # Accessing elements by index
+    print(f"First element: {int_array[0]}")
+    print(f"Last element: {int_array[-1]}")
+    
+    # Appending a new element
+    int_array.append(60)
+    print(f"Array after appending 60: {int_array}")
+    
+    # Inserting an element at a specific index
+    int_array.insert(2, 25)
+    print(f"Array after inserting 25 at index 2: {int_array}")
+    
+    # Removing an element
+    int_array.remove(20)
+    print(f"Array after removing 20: {int_array}")
+
+# Example usage
+demonstrate_arrays()
