@@ -1,0 +1,18 @@
+# Function to mirror the keys and values of a dictionary
+def mirror_dictionary(input_dict):
+    # Swapping keys and values using a dictionary comprehension
+    mirrored_dict = {value: key for key, value in input_dict.items()}
+    
+    print(f"Original Dictionary: {input_dict}")
+    print(f"Mirrored Dictionary: {mirrored_dict}")
+    return mirrored_dict
+
+# Example usage
+sample_dict = {
+    'apple': 1,
+    'banana': 2,
+    'orange': 3,
+    'grape': 4
+}
+
+mirror_dictionary(sample_dict)
