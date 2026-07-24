@@ -1,0 +1,31 @@
+import pygame
+
+# Initialize Pygame
+pygame.init()
+
+# Set up display window
+screen = pygame.display.set_mode((800, 600))
+pygame.display.set_caption("Play with Text and Font")
+
+# Set up font and render text
+font = pygame.font.SysFont("Arial", 48)
+text_surface = font.render("Hello, Pygame!", True, (255, 255, 255))
+text_rect = text_surface.get_rect(center=(400, 300))
+
+# Main game loop
+running = True
+while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+
+    # Fill screen with background color (e.g., dark blue)
+    screen.fill((30, 30, 60))
+
+    # Draw text on screen
+    screen.blit(text_surface, text_rect)
+
+    # Update display
+    pygame.display.flip()
+
+pygame.quit()
