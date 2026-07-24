@@ -1,0 +1,34 @@
+import pygame
+
+# Initialize Pygame
+pygame.init()
+
+# Set up display window
+screen = pygame.display.set_mode((800, 600))
+pygame.display.set_caption("Add Sprites - Pygame")
+
+# Load player sprite image (make sure you have an image named 'player.png' in your directory)
+# Or create a placeholder surface if no image file is available
+player_image = pygame.Surface((50, 50))
+player_image.fill((0, 128, 255))  # Blue square as a placeholder sprite
+
+# Get player rectangle and set initial position
+player_rect = player_image.get_rect(center=(400, 300))
+
+# Main game loop
+running = True
+while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+
+    # Fill screen with background color
+    screen.fill((30, 30, 60))
+
+    # Draw the sprite onto the screen
+    screen.blit(player_image, player_rect)
+
+    # Update display
+    pygame.display.flip()
+
+pygame.quit()
