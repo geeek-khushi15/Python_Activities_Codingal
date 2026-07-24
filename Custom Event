@@ -1,0 +1,42 @@
+import pygame
+
+# Initialize Pygame
+pygame.init()
+
+# Set up display window
+screen = pygame.display.set_mode((800, 600))
+pygame.display.set_caption("Custom Event - Pygame")
+
+# Define a custom event type
+CHANGE_COLOR_EVENT = pygame.USEREVENT + 1
+
+# Set a timer to trigger the custom event every 2000 milliseconds (2 seconds)
+pygame.time.set_timer(CHANGE_COLOR_EVENT, 2000)
+
+# Initial background color
+bg_color = (30, 30, 60)
+
+# Main game loop
+running = True
+while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+        
+        # Check if our custom event has been triggered
+        elif event.type == CHANGE_COLOR_EVENT:
+            # Change background color to something else dynamically
+            if bg_color == (30, 30, 60):
+                bg_color = (60, 30, 30)
+            elif bg_color == (60, 30, 30):
+                bg_color = (30, 60, 30)
+            else:
+                bg_color = (30, 30, 60)
+
+    # Fill screen with the current background color
+    screen.fill(bg_color)
+
+    # Update display
+    pygame.display.flip()
+
+pygame.quit()
