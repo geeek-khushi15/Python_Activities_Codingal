@@ -1,0 +1,166 @@
+import pygame
+import random
+
+# Initialize Pygame
+pygame.init()
+
+# Screen dimensions
+SCREEN_WIDTH = 800
+SCREEN_HEIGHT = 600
+screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+pygame.display.set_caption("Level Up this Game")
+
+# Colors
+WHITE = (255, 255, 255)
+BLACK = (0, 0, 0)
+BLUE = (50, 150, 255)
+RED = (255, 50, 50)
+GOLD = (255, 215, 0)
+
+# Clock and Font
+clock = pygame.time.Clock()
+font = pygame.font.Font(None, 36)
+
+# Player Class
+class Player(pygame.sprite.Sprite):
+    def __init__(self):
+        super().__init__()
+        self.image = pygame.Surface((40, 40))
+        self.image.fill(BLUE)
+        self.rect = self.image.get_rect()
+        self.rect.center = (SCREEN_WIDTH // 2, SCREEN_HEIGHT - 50)
+        self.speed = 5
+
+    def update(self):
+        keys = pygame.key.get_pressed()
+        if keys[pygame.K_LEFT] and self.rect.left > 0:
+            self.rect.x -= self.speed
+        if keys[pygame.K_RIGHT] and self.rect.right < SCREEN_WIDTH:
+            self.rect.x += self.speed
+        if keys[pygame.K_UP] and self.rect.top > 0:
+            self.rect.y -= self.speed
+        if keys[pygame.K_DOWN] and self.rect.bottom < SCREEN_HEIGHT:
+            self.rect.y += self.speed
+
+# Target/Collectible Class
+class Target(pygame.sprite.Sprite):
+    def __init__(self):
+        super().__init__()
+        self.image = pygame.Surface((30, 30))
+        self.image.fill(GOLD)
+        self.rect = self.image.get_rect()
+        self.reset_position()
+
+    def reset_position(self):
+        self.rect.x = random.randint(0, SCREEN_WIDTH - self.rect.width)
+        self.rect.y = random.randint(50, SCREEN_HEIGHT - 100)
+
+# Enemy/Obstacle Class
+class Enemy(pygame.sprite.Sprite):
+    def __init__(self, speed):
+        super().__init__()
+        self.image = pygame.Surface((35, 35))
+        self.image.fill(RED)
+        self.rect = self.image.get_rect()
+        self.rect.x = random.randint(0, SCREEN_WIDTH - self.rect.width)
+        self.rect.y = random.randint(-100, -40)
+        self.speed = speed
+
+    def update(self):
+        self.rect.y += self.speed
+        if self.rect.top > SCREEN_HEIGHT:
+            self.rect.x = random.randint(0, SCREEN_WIDTH - self.rect.width)
+            self.rect.y = random.randint(-100, -40)
+
+# Sprite Groups
+all_sprites = pygame.sprite.Group()
+targets = pygame.sprite.Group()
+enemies = pygame.sprite.Group()
+
+player = Player()
+all_sprites.add(player)
+
+target = Target()
+all_sprites.add(target)
+targets.add(target)
+
+# Game Variables
+score = 0
+level = 1
+enemy_speed = 3
+
+# Function to spawn enemies per level
+def spawn_enemies(num_enemies, speed):
+    for _ in range(num_enemies):
+        enemy = Enemy(speed)
+        all_sprites.add(enemy)
+        enemies.add(enemy)
+
+spawn_enemies(3, enemy_speed)
+
+# Main Game Loop
+running = True
+game_over = False
+
+while running:
+    clock.tick(60)
+
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+
+    if not game_over:
+        # Update sprites
+        all_sprites.update()
+
+        # Check collision with targets (collecting items)
+        target_hits = pygame.sprite.spritecollide(player, targets, False)
+        for hit in target_hits:
+            score += 10
+            hit.reset_position()
+
+            # Level Up Logic (Every 50 points)
+            if score % 50 == 0:
+                level += 1
+                enemy_speed += 1
+                # Add an extra enemy on level up
+                spawn_enemies(1, enemy_speed)
+
+        # Check collision with enemies
+        if pygame.sprite.spritecollide(player, enemies, False):
+            game_over = True
+
+    # Drawing
+    screen.fill(BLACK)
+    all_sprites.draw(screen)
+
+    # Render UI
+    score_text = font.render(f"Score: {score}", True, WHITE)
+    level_text = font.render(f"Level: {level}", True, WHITE)
+    screen.blit(score_text, (10, 10))
+    screen.blit(level_text, (SCREEN_WIDTH - 120, 10))
+
+    if game_over:
+        over_text = font.render("GAME OVER! Press R to Restart", True, RED)
+        screen.blit(over_text, (SCREEN_WIDTH // 2 - 180, SCREEN_HEIGHT // 2))
+
+        keys = pygame.key.get_pressed()
+        if keys[pygame.K_r]:
+            # Reset Game
+            game_over = False
+            score = 0
+            level = 1
+            enemy_speed = 3
+            all_sprites.empty()
+            targets.empty()
+            enemies.empty()
+
+            player = Player()
+            target = Target()
+            all_sprites.add(player, target)
+            targets.add(target)
+            spawn_enemies(3, enemy_speed)
+
+    pygame.display.flip()
+
+pygame.quit()
