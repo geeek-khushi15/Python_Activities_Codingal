@@ -1,0 +1,11 @@
+import random
+import calendar
+
+def month_activity():
+    month = random.randint(1, 12)
+
+    print("Random Month Number:", month)
+    print("Month Name:", calendar.month_name[month])
+    print("Number of Days:", calendar.monthrange(2026, month)[1])
+
+month_activity()
