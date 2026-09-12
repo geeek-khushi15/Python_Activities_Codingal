@@ -1,0 +1,11 @@
+import random
+import math
+
+angle = random.randint(0, 360)
+
+radian = math.radians(angle)
+
+print("Random Angle:", angle)
+print("sin =", round(math.sin(radian), 2))
+print("cos =", round(math.cos(radian), 2))
+print("tan =", round(math.tan(radian), 2))
