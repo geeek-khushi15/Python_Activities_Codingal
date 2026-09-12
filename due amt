@@ -1,0 +1,20 @@
+def due_amount(total, paid):
+    due = total - paid
+
+    if due > 0:
+        return due
+    elif due == 0:
+        return 0
+    else:
+        return 0
+
+
+total = float(input("Enter total amount: ₹"))
+paid = float(input("Enter amount paid: ₹"))
+
+due = due_amount(total, paid)
+
+if due > 0:
+    print("Due Amount = ₹", due)
+else:
+    print("No amount is due! 🎉")
