@@ -1,0 +1,18 @@
+print("⚔️ SET BATTLE ⚔️")
+print("----------------")
+
+team_a = set(input("Enter Team A players: ").split())
+team_b = set(input("Enter Team B players: ").split())
+
+print("\n🅰️ Team A:", team_a)
+print("🅱️ Team B:", team_b)
+
+# Symmetric Difference
+result = team_a ^ team_b
+
+print("\n🔥 Players in only one team:")
+print(result)
+
+# Using method
+print("\n✨ Using symmetric_difference():")
+print(team_a.symmetric_difference(team_b))
