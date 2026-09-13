@@ -1,0 +1,61 @@
+import random
+
+print("🎮 PLAY WITH LISTS 🎮")
+print("--------------------")
+
+items = []
+
+# Take 5 items from the user
+for i in range(5):
+    item = input(f"Enter item {i + 1}: ")
+    items.append(item)
+
+print("\n📋 Your List:")
+print(items)
+
+# Basic information
+print("\n🔹 First item:", items[0])
+print("🔹 Last item:", items[-1])
+print("🔹 Total items:", len(items))
+
+# Add an item
+new_item = input("\n➕ Enter an item to add: ")
+items.append(new_item)
+
+print("Updated List:", items)
+
+# Remove an item
+remove_item = input("\n❌ Enter an item to remove: ")
+
+if remove_item in items:
+    items.remove(remove_item)
+    print("Item removed!")
+else:
+    print("Item not found!")
+
+print("Updated List:", items)
+
+# Search
+search_item = input("\n🔍 Enter an item to search: ")
+
+if search_item in items:
+    print("✅ Item found!")
+else:
+    print("❌ Item not found!")
+
+# Sort
+items.sort()
+print("\n🔤 Sorted List:")
+print(items)
+
+# Reverse
+items.reverse()
+print("\n🔄 Reversed List:")
+print(items)
+
+# Random choice
+if len(items) > 0:
+    print("\n🎲 Random Choice:")
+    print("Your random item is:", random.choice(items))
+
+print("\n🎉 Thanks for playing!")
